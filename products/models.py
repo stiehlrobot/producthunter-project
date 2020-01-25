@@ -42,6 +42,9 @@ class Product(models.Model):
         return self.pub_date.strftime('%b %e %Y')
 
 
+class Voter(models.Model):
 
-#hunter
+    hunter = models.ForeignKey(User, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+
 
